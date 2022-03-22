@@ -27,9 +27,19 @@ const mapStateToProps = (state) => ({
   todos: state.todos.todos,
 });
 
-export default connect(mapStateToProps, {
-  changeInput,
-  insert,
-  toggle,
-  remove,
-})(TodosContainer);
+const mapDispatchToProps = (dispatch) => ({
+  changeInput: (input) => {
+    dispatch(changeInput(input));
+  },
+  insert: (text) => {
+    dispatch(insert(text));
+  },
+  toggle: (id) => {
+    dispatch(toggle(id));
+  },
+  remove: (id) => {
+    dispatch(remove(id));
+  },
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(TodosContainer);
