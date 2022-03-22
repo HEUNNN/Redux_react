@@ -12,7 +12,7 @@ const initialState = {
 };
 
 //4. 리듀서 만들기
-const counterReducer = (state = initialState, action) => {
+const counter = (state = initialState, action) => {
   switch (action.type) {
     case INCREASE:
       return {
@@ -26,4 +26,4 @@ const counterReducer = (state = initialState, action) => {
       return state;
   }
 };
-export default counterReducer;
+export default counter;

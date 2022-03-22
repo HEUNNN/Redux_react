@@ -33,7 +33,7 @@ const initialState = {
 };
 
 //4. 리듀서 만들기
-const todosReducer = (state = initialState, action) => {
+const todos = (state = initialState, action) => {
   switch (action.type) {
     case CHANGE_INPUT:
       return {
@@ -61,4 +61,4 @@ const todosReducer = (state = initialState, action) => {
       return state;
   }
 };
-export default todosReducer;
+export default todos;
